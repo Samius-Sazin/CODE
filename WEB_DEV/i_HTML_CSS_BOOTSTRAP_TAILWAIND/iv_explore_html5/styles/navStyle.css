@@ -1,0 +1,52 @@
+/* > used for immediate successor */
+nav > ul{
+    /* make every list item horaizontal from vertical */
+    display: flex;
+}
+
+nav li{
+    /* points before the lists will be gone */
+    list-style: none;
+
+    /* for spacing between options */
+    margin-right: 20px;
+    padding: 0px 10px;
+}
+
+nav li:hover{
+    background-color: red;
+}
+
+nav li a{
+    /* remove the underscore of a anchor tag */
+    text-decoration: none;
+
+    color: blue ;
+    font-size: 24px;
+}
+
+/* if we hover on li, ul values will show */
+nav > ul > li:hover ul{
+    display: block;
+}
+
+.dropdown{
+    /* to hide anything */
+    display: none;
+
+    /* fix its position */
+    position: absolute;
+
+    font-size: 20px;
+
+    background-color: lightyellow;
+
+    padding: 0px;
+    margin: 0px;
+}
+
+
+.dropdown > li{
+    padding: 0;
+    margin: 0;
+}

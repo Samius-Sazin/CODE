@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Student Form</h2>
+    <form action="">
+        <p>(form+input type)</p>
+        <pre>First Name : <input type="text" placeholder="Enter first name"></pre>
+        <pre>Last Name  : <input type="text" placeholder="Enter last name"></pre>
+        <pre>Email      : <input type="text" placeholder="Enter your Email"></pre>
+        <pre>Phone Numb : <input type="text" name="" placeholder="Enter phone number"></pre> 
+
+        <!-- radio button -->
+        <fieldset>
+            <legend>Select Subject (fieldset+legend+input type(radio))</legend>
+            <p>
+                <label for="coder">
+                    <input type="radio" name="Subject" id="coder"> Programmer
+                </label>
+            </p>
+
+            <p>
+                <label for="dctr">
+                    <input type="radio" name="Subject" id="dctr"> Doctor
+                </label>
+            </p>
+
+            <p>
+                <label for="eee">
+                    <input type="radio" name="Subject" id="eee"> EEE
+                </label>
+            </p>
+        </fieldset>
+
+        <!-- checkbox -->
+        <fieldset>
+            <legend>Select Category (fieldset+legend+input type(checkbox)</legend>
+            <p>
+                <label for="C">
+                    <input type="checkbox" name="" id="C"> C lang
+                </label>
+            </p>
+
+            <p>
+                <label for="C++">
+                    <input type="checkbox" name="" id="C++"> C++ lang
+                </label>
+            </p>
+            <p>
+                <label for="java">
+                    <input type="checkbox" name="" id="java"> Java lang
+                </label>
+            </p>
+        </fieldset>
+
+        <!-- Text Area -->
+        <p>(text area)</p>
+        <textarea name="" id="" placeholder="Write something here" cols="50" rows="3"></textarea> <br>
+
+        <!-- button -->
+        <!-- <button>Submit</button> //not appropriate -->
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+
+    </form>
+</body>
+</html>

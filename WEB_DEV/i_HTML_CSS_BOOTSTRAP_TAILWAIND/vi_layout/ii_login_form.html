@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://kit.fontawesome.com/b7f28fb327.js" crossorigin="anonymous"></script>
+
+    <style>
+        .navigation{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navigation .link a{
+            text-decoration: none;
+            font-size: larger;
+            font-weight: bolder;
+            color: black;
+            margin-right: 30px;
+        }
+
+
+        .login-container{
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .login-form{
+            border: 3px solid black;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .login-form input, button{
+            font-size: 1.3em;/*make font larger*/
+
+            margin: 5px;
+
+            border: 2px solid lightslategray;
+            border-radius: 5px;
+        }
+
+        .login-form button{
+            background-color: darkgreen;
+            color: white;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navigation">
+            <span class="link">
+                <a href="">Home</a>
+                <a href="">Products</a>
+                <a href="">Order</a>
+                <a href="">About us</a>
+            </span>
+            <span>
+                <a href=""><i class="fa-solid fa-user"></i></a>
+                <a href=""><i class="fa-solid fa-right-from-bracket"></i></a>
+            </span>
+        </nav>
+    </header>
+    
+    <section class="login-container">
+        <form action="" class="login-form">
+            <h2 style="margin-bottom: 1px; margin-left: 4px;">Login</h2>
+            
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <input type="password" name="password" placeholder="Enter passwords" required>
+            
+            <button type="submit">Login</button>
+        </form>
+    </section>
+</body>
+</html>
