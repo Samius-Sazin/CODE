@@ -1,0 +1,8 @@
+.show-lang{
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+}
+.Show-Lang-In-Courses{
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+}
