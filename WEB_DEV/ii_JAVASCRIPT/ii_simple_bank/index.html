@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bank</title>
+
+    <!-- tailwind stylesheet -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+</head>
+<body>
+    <!-- header part -->
+    <header>
+        <h3 class="text-5xl text-center font-semibold mt-10 mb-10">welcome to <span class="text-lime-500">SAIN Bank</span></h3>
+    </header>
+
+    <main>
+        <!-- login part -->
+        <section class="bg-lime-400 w-1/2 h-60 mx-auto flex items-center justify-center rounded-lg">
+            <div>
+                <h3 class="text-3xl text-center font-medium mb-3">Login here :</h3>
+                <input id="user_name" class="border border-blue-500 rounded-lg ps-2 pb-1 w-80 mb-0.5 " type="text" placeholder="user_name"> <br>
+                <input id="pass_word" class="border border-blue-500 rounded-lg ps-2 pb-1 w-80 mb-2" type="password" placeholder="passsword"> <br>
+                <button id="submit_button" class="bg-blue-600 p-1 ps-4 pe-4 rounded-lg text-lime-200 font-semibold">Submit</button>
+            </div>
+        </section>
+        
+        <!-- info part -->
+        <section class="mt-10 ms-10 bg-lime-400 w-60 h-20 font-semibold flex justify-center items-center rounded-lg">
+            <div>
+                <h3>Username : sazin</h3>
+                <h3>Password : sazin1234</h3>
+            </div>
+        </section>
+    </main>
+
+    <!-- connect javaScript file -->
+    <script src="js/login.js"></script>
+</body>
+</html>

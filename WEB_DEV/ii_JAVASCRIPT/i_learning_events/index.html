@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+            <!-- ** 1 ** -->
+    <!-- system 1 -->
+    <button onclick="document.body.style.backgroundColor = 'Red'">I love Red</button>
+
+    <!-- system 2 -->
+    <button onclick="makeGreen()">I love Green</button>
+    <!-- system 3 -->
+    <button id="iLovePink">I love pink</button>
+    <!-- system 2,3 script part is placed at bottom -->
+
+    
+    <!-- system 4 -->
+    <button id="iLoveYellow">I love Yellow</button>
+    <script>
+        const yellow = document.getElementById('iLoveYellow');
+        // yellow.onclick = function (){
+        yellow.addEventListener('click', function makeYellow(){
+            document.body.style.backgroundColor = 'Yellow';
+        })
+    </script>
+    
+
+
+    <!-- ** 2 ** -->
+    <hr><br><br><br>
+    <!-- post here -->
+    <div id="paragrap_section">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit neque architecto quae quo ratione explicabo nisi quia, nihil magni facere voluptate corrupti enim commodi laudantium sed quod saepe. Eius, quis.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, voluptate dolorum iste exercitationem dolore molestias debitis impedit minima neque ullam?</p>
+    </div>
+
+    <div>
+        <h3>Add Something :</h3>
+        <textarea name="" id="Text_Area" cols="60" rows="3"></textarea><br>
+        <button id="post_button">Post Here</button>
+    </div>
+
+
+
+
+    <!-- ** 3 ** -->
+    <hr><br><br><br>
+    <!-- delete like github -->
+    <div>
+        <h3 id="text_to_delete">Delete me? Then type 'delete' !!</h3>
+        <input id="input_area" type="text" name="">
+        <button id="delete_button" disabled>Delete</button>
+    </div>
+
+
+
+
+
+    <!-- for system 2, 3, post_here, delete_like_github,  -->
+    <script src="JavaScript.js"></script>
+</body>
+</html>
