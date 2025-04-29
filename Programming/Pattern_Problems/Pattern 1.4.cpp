@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n,r,c;
+    cin>>n;
+    for(r=1; r<=n; r++)
+    {
+        for(c=1; c<=r; c++)
+        {
+            if(c%2==0) cout<<"B";
+            else cout<<"A";
+        }
+
+        cout<<endl;
+    }
+    return 0;
+}
+/*
+
+n=5
+A
+AB
+ABA
+ABAB
+ABABA
+
+*/
