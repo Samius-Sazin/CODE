@@ -1,0 +1,1580 @@
+*****_____INSTRUCTIONS_____*****
+
+1. New Topic Starts with *****_____ name _____*****
+2. main topic starts with ~, ~~.
+3. sub topic start with *, ** or *** etc.
+4. if sub topic has part, starts with '.' one dot.
+5. important topic under sub topic starts with '..' double dot
+6. If any topics exampl code avl, path will be written before the topic with
+	exmpl: < js.api.closure >
+7. main topic has 4 space between them
+8. sub topic has 1 space between them
+
+
+*****_____ ShortCuts _____*****
+ctrl + shift + o -> find func
+ctrl + g -> go to any line
+
+
+
+*****_____ Window SIze _____*****
+
+
+
+
+*****_____ Links/Website Part _____*****
+. theme forest(demo websites)
+. flaticon, fonstawsome
+. freepic(illustration)
+. unsplash(for pic)
+. react-rating
+. metarial-Ui (framework like bootstrap)not imp
+. recharts (for chart)
+. Axios.com (fetch)\
+. react spring (animation)
+. react router
+. Context API(used for better props drilling)
+. react-rating
+. netlify (_redirects -> /* /index.html 200)
+. FIrebase.google.com (authentication)
+. Swapper.js
+. React Hook Form (for form)
+. Photopea (Edit photo online)
+. TinyPng (optimize img)
+. imgbb (free image, photos, picture hosting site)
+. react router hash link
+. node mailer, sendgrid (send mail after processed order)
+. http method
+. get vs post
+. Aceterity Ui, hover.dev
+. jitter.video(for logo/icon)
+. react headroom (navbar hide on scroll)
+. swiper (carosel, slider, image scroll automatically)
+. i18n for internationalizaition, translation
+. react dropzone- for drag drop file upload
+. helmet js : for nodejs express security
+. cloudinary: 45@
+. create secret key: openssl rand -base64 32
+. canvas confetti-alert show
+. magic ui, works with shadcn/ui, slider/marquee
+. Aos - Animation on Scroll
+. Isotop.js - for sort elements with animationss
+
+
+
+*****_____ Question Part _____*****
+
+~~ Q. HTML, CSS, JavaScript :
+
+* grid vs flex
+* diff between html & html5
+* about semantic tag
+* Which CSS Version started using Media Query? CSS-2
+* Purpose of @import in css: import stylesheet into another style sheet
+* The default position of an HTML element? static
+* Javascript is scripting/programming languag is an interprated lang.
+* DOM - Document Object Model
+* NODE is part of html DOM
+* The InnerText Gives only the text inside a tag
+* QuerySelectorAll will return a nodeList
+* createElement Create A New Html Element/Tag
+
+** javaScript event bubble: Propagating an event from the lowest to the upward. when we add event handler in many parent/child tags, then after capturing those event from parent to child, the lowest element will trigger first.
+	.How to stop event bubbble : by using
+		-> event.stopPropagation();
+
+	.stop other events on similar element
+		-> event.stopImmediatePropagation(); 
+
+** Event Delegate : 
+
+* OOOP
+* prototypical Inheritance:(multi level inheritance) : in js from one obj to enother obj properties shared in a chain method, it is called prototypical inheritance
+
+* API(Application Programming Interface) :
+. HTTP get vs post
+	.Hypertext Transfer Protocol (HTTP) is designed to enable
+	 communications between clients and servers.
+
+	.GET is used to request data from a specified resource.
+	 	.GET requests can be cached
+		       .remain in the browser history
+		       .can be bookmarked
+		       .have length restrictions
+	.POST is used to send data to a server to create/update a resource
+		.POST requests are never cached
+		        .do not remain in the browser history
+		        .can not be bookmarked
+		        .have no length restrictions
+. CRUD in rest api : CRUD operations are used to manage data in a
+		     structured and efficient way, by providing the
+		     functionality to Create, Read, Update and Delete
+		     data records.
+
+
+* XHR = XML HTTP Request
+
+* textContent : All the text contents of a node and all its descendants
+* Async Await
+* about let vs var
+* about declare variable without let/var/const
+
+*** Closure
+
+* Call back function : pass a func to another func as argument
+
+* Bind, Call, Apply
+
+** This -> executionar context.
+* Arrow function can't hold 'this' value, take it's immediate
+  predecessor's 'this', normal function can
+
+* Window in js : A global variable, window, representing the window
+  in which the script is running
+
+* Hoisting, Global Licking
+
+
+
+
+~~ Q. How JS & Browser works: 
+
+* JS is a single-threaded, dynamic type programming language
+
+** How JS run in browser?
+* Javascript V8 enginee has Just In time compiler(JIT)
+	in it that compile the JS code
+	.Firefox use Spider_Monkey enginee to compile JS
+
+* Browser takes HTML & CSS, then make a render tree, then paint, then display.
+* Re Render: when we changes anything in css/html broser re render it
+	and thes re_paint(re flow of DOM) and display
+
+* Gurbage Collection
+* About DNS(Domain Name System) server
+*** (Later) JavaScript EventLoop, Concurrency
+* How HTTP works
+* Heap memory is large mostly unstructured region of memory.
+
+* Session and Local storage difference:
+	Both are similar. The difference between them is that the
+	LocalStorage data does not expire, whereas sessionStorage
+	data is cleared when the page session ends.
+* Cookies :
+	Coockies are small pieces of text sent to browser by a website
+	that user visit. They help that website remember information about
+	user's visit, which make it easier to visit the site again and make
+	the site more useful to user.
+
+* What is Accessibility?
+* Chrome devtools console api
+* Call Stack: All previous functions that called this current function
+* Regular Expression for beginners in JavaScript
+
+* TypeScript:
+	.Typescript is a superset of JavaScript.
+	.Typescript code needs to be compiled while JavaScript code
+	  doesn’t need to compile.
+	.Typescript uses concepts like types and interfaces to describe
+	  data being used whereas JavaScript has no such concept.
+
+
+
+
+~~Q. REACT :
+
+* React is a Library, as it gives more flexibility
+	.Frameworls are strict
+	.Libraries are Flexible 
+
+* SPA: Single Page Application (Like Gmail web page)
+	.Advantage of SPA:		
+		User Experience
+		Optimization
+		Client side Rendering
+
+* State of a website: Web Application data that could change.
+
+* Routing:Define the URL and based on URL set different parts of the website.
+
+* Fragment: Return empty tag <></>.
+
+* Evaluated Expression:
+	// here {x} is evaluated expression
+	const x = 'sami';
+	<p> Hi I am {x} <p/>
+
+* React Fiber : documentation from github by acdlite
+
+* React Hook : Used to change/modify/manage State,
+
+* npm/ npx : node package manager/extension
+
+* CLI : Comand Line Interface(Create react app is a cli)
+
+* Babel: Iit's a JavaScript Compiler
+
+* Unidirectional:
+	. React Props flow is uniDirectional/One_way
+	. React uses one-way data-binding
+
+* Prop Drilling: 
+* Props properties are only read only.
+
+* Statefull Component: Component that contains Hook/ Component that has state 
+* Stateless Component/Presentational: Component does not have any Hook.
+
+* Props vs State:
+	. Props is a value received from its parent component, read only
+	. State is a thing that change is website.
+
+* virtual Dom: 
+* Diff Algorithm:
+
+* React component Lyfecycle:
+	. Mounting (ComponentDidMount)
+	. Updating (ComponentDidUpdate)
+	. Unmounting (ComponentWillUnmount)
+
+
+* State: The state object is, Where we store property values
+	 that belongs to the component.
+
+
+
+
+
+
+
+
+
+*****_____ Browser and Debug Part _____*****
+
+~~ JS works as both syncronous & asyncronous way :
+
+	< js.x_browser_debug.i_setTimeout >
+* setTimeout() :
+	// works in Asyncronous way
+	// js do other operation, then execute this part
+	
+	setTimeout(funcName);
+	setTimeout(funcName, time(miliSecond));
+	setTimeout(func(){..}, time);
+
+	Ex. setTimeout(print(), 5000);//5000 milisecond, 5 second
+
+* fetch also works in Asynchronous way, execute at last.
+	Untill then other operations continue in normal way.
+
+	< js.x_browser_debug.ii_setInterval >
+* setInterval() :
+	.Part 1:
+	// like setTimeout(). JS do other operations, then execute this part
+	// This part execute and execute, untill we do not stop it manually.
+	
+	setInterval(funcName);
+	setInterval(funcName, time(miliSec))
+
+	.Part 2:
+	//this function returns an id, callled interval id.
+	//Using this id, setInterval() function can stop by code(not manually)
+
+	const interval_id = setInterval(()=>{
+	
+	}, time);
+
+~ useState() hook's setCounter() works as Asyncronous
+
+
+
+~ alert(), confirm(), prompt() -> all are similar to modal
+
+* alert();
+	alert('Your PC has bugs');
+
+* confirm();
+	//confirm has 'ok' and 'cancel' button
+	//'ok' returns true value, cancel returns 'false' value
+	
+	const response = confirm('Text...');
+	// here response = true/false;
+
+* prompt();
+	//prompt has 'ok' and 'cancel' button
+	//it also has input are, where it can take input
+	//'ok' returns both true & input area value
+	//'cancel' returns 'false' value
+
+	const res = prompt('Enter name');
+	//here res = false/true('Samius Sazin')
+
+
+
+
+~ Parts of a URL: (href, searchQuery, Domain, Scheme, host, hash...)
+
+* Location object: With this object we can get access of all parts of an URL
+	location.host;
+	location.href;
+	location.hash;
+	location.relode();
+
+* History Object:
+	history.back(); // go backword
+	history.forward(); //go forward
+
+	//refresh the current page
+	history.go(); or, history.go(0);
+
+	history.go(1); // go to 1st page,
+	history.go(3); // go to 3rd page,
+	history.go(-1); // go 1page back,
+
+* Cookies:
+	.Has 2 part -> Name & Value
+	// get cookies, returns a string
+	const cookie_str = document.cookie;
+
+* Local storage & Session storage:
+	.Has 2 part -> Name & Value
+	// Both returns either string or json format value
+	// If we add something manually -> returns string value
+	// System data returns -> json format value
+
+	// get value
+	localstorage.getItem('item_name');
+	sessionstorage.getItem('item_name');
+
+	// set value
+	localstorage.setItem('name', 'value');
+
+	// remove item
+	localstorage.removeItem('name');
+
+* Content editable: (defult value 'inherit')
+	//now we can edit anything on current web page
+	document.body.contentEditable = true;
+
+
+
+~ Dev tools Console API:
+* Monitor:
+	// Monitor any func/button/or_any_element for debug
+	monitor(name);
+	monitorEvents(name);
+
+	unmonitor(name);
+	unmonitorEvents(name);
+
+	// in order to monitor only click & mouse_out events of 'name' element
+	monitorEvents(name, ['click', 'mouseout']);
+
+* getEventListeners(object):
+	//returns all events applied of an element/object
+
+** Regular Expression:
+	.Returns T/F value
+	
+	//Check if string has number from 0-9 or not
+	/[0, 9]/.test(stringName); 
+	
+	//Check if string has number from A-Z or not
+	/[A, Z]/.test(stringName) 
+
+
+
+
+~ TypeScript:
+
+* Declare a variable with data type:
+	let num: number = '13'; //error
+
+	let num: number = 13;   //ok
+	let name: string = 'Sami'; //ok
+	let Bool: boolean = true; //ok
+
+	// Set multiple datatype to a variable
+	let x: number | string;
+
+* Array:
+	// array of number
+	let arr: number[] = [1, 2, 3];
+
+	// array of string
+	let arr: string[] = ['a', 'abc', 'sami'];
+
+	// Other operations are similar as JS
+
+* Object:
+	// 1st way
+	const obj: {}= {
+    		name: 'sami',
+    		id: 1236
+	}	
+	
+	// 2nd way
+	const obj: {name: string, id: number}= {
+        	name: 'sami',
+        	id: 1236
+    	}
+
+	// 3rd way, declare the type first
+	type obj_type = {name: string, id: number};
+	const obj: obj_type = {
+    		name: 'sami',
+    		id: 1236
+	}
+
+
+* Normal Function:
+	.functions of duplicate name not allowed
+	//declare function, add parameter with dataType and initialize
+	
+	// error
+	function add(n1, n2){}
+	
+	//1. both are ok, 2nd one is preferable
+	function add(n1: number, n2: number) {
+		return n1+n2
+	}
+	
+	//2. add return type to a function
+	function add(n1: number, n2: number): number {
+		return n1+n2
+	}
+
+	// Call the function and pass argument
+	add('Sami', 'Sazin'); //error
+	add(3, 5); // ok
+
+	//Return nothing? use void
+	function add(n1: number, n2: number): void {
+		print(n1+n2);
+	}
+
+	// Set multiple datatype to func, parameter..
+	function add(n1: number | string, n2: number | string): number | string{
+		// Code
+	}
+
+	// Object with in a function
+	function func6(stud: {name: string, id?: number}): void {
+		console.log('Name : ', stud.name);
+		console.log('ID   : ', stud.id);
+	}
+
+	//call this function
+	// func6({name: 'sami', id: 1236});
+
+	
+* Arrow Function:
+	//normal arrow func
+	const func = () => {...}
+
+	// void return type
+	const func = (): void => {
+    		// code
+	}
+	
+	//number return type
+	const func = (): number => {
+    		return 10;
+	}
+
+	// with parameter
+	const func = (n1: number, n2: number): number => n1+n2;
+	
+	//or
+	const func = (n1: number, n2: number): number => {
+		return n1+n2;
+	}
+
+
+** Interface:
+	.// Declare & Initialize
+	interface Student{
+		name: string,
+		id: number,
+		age: number
+		graduation_year?: number; //'?' means this point is optional
+		
+		//some other properties
+		courses?: string[]
+	}
+
+	//name, id, age must be initialize in s1 & s2, otherwise error
+	//But graduation_year is optional, show no error if not initialize
+	const s1: Student = {
+		name: 'Sami',
+		id: 1236,
+		age: 21
+	}
+	const s2: Student = {
+		name: 'Samius Sazin',
+		id: 1236,
+		age: 21,
+		graduation_year: 2026,
+		
+		courses: ['math', 'phy', 'che']
+	}
+
+
+	.// We can do inheritance
+	interface Student2 {
+		name: string,
+		id: number,
+		age: number
+	}
+	interface Alumni2 extends Student2{
+		job: string,
+		graduation_year: number
+	}
+	const s3: Alumni2 = {
+		job: 'SWE',
+		graduation_year: 2026,
+
+		//we must initialize properties of student3 or show error
+		name: 'Samius Sazin',
+		id: 1236,
+		age: 21
+	}
+
+
+* Class in TypeScript
+	// declare a class
+	class student4 {
+		//declare variable
+		name: string;
+		id: number;
+		private _cgpa: number;//declare a private variable
+
+		//constructor
+		constructor(name: string, id:number, _cgpa: number){
+			this.name = name;
+			this.id = id;
+
+			this._cgpa = _cgpa;
+		}
+
+		//normal function
+		printInfo(){
+			console.log('Name : ', this.name);
+			console.log('Id   : ', this.id);
+		}
+		//normal function that returns some value
+		returnValue(numb:number): number{
+			return numb + numb;
+		}
+	}
+
+	//create object of 'student4' class
+	const s4 = new student4('Sami', 1236, 3.92);
+	// s4.printInfo();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*****_____ REACT Part _____*****
+
+~ Basics:
+
+* Call func, pass argum, receive argum. :
+     //to pass arr, object we have to insert them into a variable,
+     //then pass them to func
+  	const arr = [1, 2 , 3];
+  	const obj = {
+    		name: "Sami",
+    		age: 21,
+  	}
+
+     //Call function from jsx, pass arguments
+     <Card full_name="Abcd Def" button_text="Click me" array={arr} info={obj}/>
+
+     //The function that will be called & receive those arguments as an Object
+     function Card(props){}
+	
+	.Here props is an object & contains those value
+		props = {
+			full_name: "Abcd Def",
+			button_text: "Click_me"
+		}
+
+
+
+
+~ Hooks:
+     import { useState, useRef, useCallback, useEffect } from 'react'
+	
+     * useState Hook:
+	func{
+	    //its like, let counter = 0;
+  	    let [counter, setCounter] = useState(0);
+	}
+	
+	//Change the state of counter
+	setCounter(counter => counter + 1);
+
+     * useCallback(fn, dependency)
+
+     * useRef(null), get value from an input field
+	const passwordRef = useRef(null);
+	
+	passwordRef.current?.select();
+	passwordRef.current?.setSelectionRange(0, 3);
+
+      * useRef
+	//in JS part
+	const nameRef = useRef();
+	const handleAddName = () => {
+    	   const val = nameRef.current.value;
+  	}
+
+	//in html part
+	<form onSubmit={handleAddName}>
+          <input type='text' ref={nameRef} />
+          <input type='submit' value='Submit' />
+      	</form>
+
+     * useEffect(fn, dependency)
+
+
+
+~ Reduce:
+	.Work like, find out sum of an array without loop,	
+
+	const arr = [1, 2, 3];
+	const fnc = (prev, curr) => prev + curr;
+	const x = arr.reduce(fnc, 0);	
+
+
+
+
+~ Metarial ui
+~ Recharts
+~ Axios.com (for fetch)
+~ React Spring (for Animation)
+
+
+
+
+~ React Router :
+
+	import { BrowserRouter, ... } from 'react-router-dom';
+	<BrowserRouter>
+          <Routes>
+            <Route
+              path='/'
+              element={<Home />}
+            ></Route>
+          <Routes>
+	</BrowserRouter>
+
+	.Link:
+	    .Must use inside of BrowserRouter
+		<Link to="/about">About</Link>
+
+	    .Upgrade version is, <NavLink>
+		   .active{
+    			text-decoration: underline;
+    			text-decoration-color: #4e9a02;
+    			text-underline-offset: 4px;
+    			text-decoration-thickness: 2px;
+		    }
+
+		    <NavLink
+                        to="/services"
+                        activeclassname="active"
+                        className="hover:underline decoration-[#4e9a02] decoration-2 underline-offset-4"
+                    >Services</NavLink>
+
+	.Navigate hook (to go from one page to enother page)
+		const navi = useNavigate();
+		navi('/home');
+
+	.useParams() :
+		used to change dynamic parts of a path
+
+
+
+
+~ Conditional Rendering:
+	..We can use HTML in if-else condition
+
+	.Normal if-else way:
+	let xx;
+	if(condition === true){
+	     xx = <p>This Is Me</p>
+	}
+	else{
+	     xx = <p>This Is Not Me</p>
+	}
+
+	.Using turnery operator:
+	(condition) ? <p>X_Y_Z</p> : <p>x_y_z</p>
+
+	.Shortcut of turnery operator:
+	//if condition is true then next part will execute
+	(condition) && <p>X_Y_Z</p>
+	
+	//if condition is false then next part will execute
+	(condition) || <p>x_y_z</p>
+
+
+
+
+~ Props Drilling :
+     ..Send data from one component to other(to its child) component
+	
+      < react.proghero.14ReactAuthIntegrationRouter >
+     .Context API
+	..Used to transfer data from one component to its 4th, 5ht or nth
+	  component directly.
+        
+	//Everything of ComponentB, is accessible from those components
+	// where ComponentA is used.
+	import { createContext } from "react";
+
+        export const MyContext = createContext();
+
+        function ComponentA( props ) {
+            const allContext = ComponentB();
+            
+            return (
+                <MyContext.Provider value={allContext}>
+                    {props.children}
+                </MyContext.Provider>
+            )
+        }
+        export default ComponentA;
+
+
+
+
+~ React Rating
+	install: npm install --save react-rating
+	<Rating
+          readonly
+          initialRating={star_number}
+          emptySymbol="fa-regular fa-star"
+          fullSymbol="fa-solid fa-star"
+        ></Rating>
+
+
+
+
+~ React mapbox gl:
+	for map, alternative of google map
+
+
+
+
+
+~ set image in state, fetch image
+	.in JS
+	     const [image, setImage] = useState(null);
+
+	.in html
+	     onChange(e => setImage(e.target.files[0]));
+
+
+
+
+
+
+*****_____ REACT Authentication Part _____*****
+
+~ Firebase Authentication :
+	
+	// Add log in with google in web, milestone 10 : 56-6
+	// Add log in with github (third party) milestone 10 : 56-7
+	// Add log in with facebook (third party) milestone 10 : 57.5
+	// Add gmail/pass for log in
+	
+	. createUserWithEmailAndPassword
+	. signInWithEmailAndPassword
+	. sendEmailVerification
+	. sendPasswordResetEmail
+	. updateProfile
+
+
+
+
+~ Regex password: 
+	const p = "abcd";
+
+	//as p contains all lowercase later,
+	  so if condition is false
+	if(/(?=.*[A-Z])/.test(p)){..}
+	
+
+
+
+< react.proghero.14ReactAuthIntegrationRouter >
+~ Outlet:
+	import { Outlet } from 'react-router'
+	return(
+              user.email ? <Outlet/> : <Navigate to='/login' />
+    	)
+	
+	<Route element={<AuthMiddleware />}>
+              <Route path='/home' element={<Home />} />
+        </Route>
+
+
+
+~ AuthMiddlewre (pass state also)
+	import { Navigate, Outlet, useLocation } from "react-router-dom";
+	import useAuth from "../hooks/useAuth"
+
+	function AuthMiddleware() {
+    		const { user } = useAuth();
+    		const location = useLocation();
+
+    		return (
+        		user?.email ? <Outlet /> : <Navigate to='/register' state={{ from: location }} replace={true} />
+    		)
+	}
+
+	export default AuthMiddleware
+
+	.use from another file
+	const location = useLocation();
+	navigate(location?.state?.from?.pathname || '/home');
+
+
+
+
+
+~ dotenv react :
+	npm i react-dotenv
+
+	.in js file
+	    import env from "react-dotenv";
+            const firebaseConfig = {
+                apiKey: process.env.REACT_APP_API_KEY,
+                authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+                projectId: process.env.REACT_APP_PROJECT_ID,
+                storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+                messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+                appId: process.env.REACT_APP_APP_ID
+              };
+
+		
+	. in .env file
+            REACT_APP_APIKEY: "xxxxxxxyyyyyy",
+            REACT_APP_AUTHDOMAIN: "xxxxxxxxxxyyyyyy",
+
+
+
+
+
+
+
+
+
+
+
+
+
+*****_____ NODE JS _____*****
+
+~ Basics :
+* Installing & Set_up :
+	.npm init
+	.npm i express cors mongodb
+	.create index.js file
+	.npm install -g nodemon
+	.setup script
+                "scripts": {
+    		   "start": "node index.js",
+    		   "start-dev": "nodemon index.js",
+   		}
+
+
+
+
+
+~ set up require, express, port
+* require, express, port, app.get & app.listen :
+        const express = require('express');
+        const app = express();
+        const port = process.env.PORT || 5000;
+
+        app.get('/', (req, res) => {
+            res.send({name: "Sami", id: "1236", age: "21", cgpa: "3.92"});
+        })
+
+        app.listen(port, () => {
+            console.log("PORT : ", port);
+        })
+
+* Params : (dynamic id)
+	app.get('/users/:id', (req, res) => {
+    	      const index = req.params.id;
+	})
+
+* query: (search value)
+	app.get('/users', (req, res) => {
+    	     const search = req.query.search;
+	})
+
+* Query:
+	app.get('/users', (req, res) => {
+    	     console.log(req.query);
+	})
+
+* Cors middleware :
+	.Used to fetch localhost data from node project
+	.Where to find:
+	     Node Expressjs -> resources -> middleware -> cors
+	.Installation :
+	     npm install cors
+
+	     .In index.js file, Enable All CORS Requests
+	     const cors = require('cors');
+	     app.use(cors());
+	     app.use(express.json());
+
+
+
+
+
+
+* dotenv (to secure information, uID, pass) :
+	.npm i dotenv
+
+	.in .env file
+		DB_USER="Database_name"
+		DB_PASS="password"
+	
+	.in index.js file
+		require('dotenv').config();
+		
+		//How to use
+		.in username -> process.env.DB_USER
+		.in password -> process.env.DB_PASS
+
+
+
+
+
+
+~ Send data to server :
+.in react app:
+	useEffect(() => {
+		newUser = {name: name, age: age, id: id};
+		fetch('URL', {
+	            method: 'post',
+	            headers: {
+	     	       'Content-Type': 'application/json'
+	            },
+	     	    body: JSON.stringify(newUser)
+		})
+		.then(res => res.json())
+		.then(data => console.log(data));
+	}, [])
+
+.in nodeJs index.js file
+
+	app.post('/users', (req, res) => {
+		const newUser = req.body;
+		//send data to client site
+		res.send(JSON.stringify(newuser));
+		res.json(newUser);
+	})
+
+
+
+
+
+
+~ MongoDB part (npm i mongodb) :
+	..for help: node mongodb driver, usage example
+    const { MongoClient, ObjectId } = require('mongodb');
+    const cors = require('cors');
+
+    app.use(cors());
+    app.use(express.json());
+
+    const uri = url;
+    const client = new MongoClient(uri);
+
+    async function run() {
+        try {
+            const database = client.db("userInfo");
+            const usersCollection = database.collection("users");
+
+	   //save data to DB
+           app.post('/users', async (req, res) => {
+           	const userData = req.body;// type object
+           	const result = await usersCollection.insertOne(userData);
+           	res.send(result);
+           })
+
+            // get API, get data from DataBase
+            app.get('/users', async (req, res) => {
+                const cursor = usersCollection.find({});
+                const users = await cursor.toArray();
+		.//LOAD 10 data only
+		const users = await cursor.limit(10).toArray();
+                res.send(users);
+            })	
+
+	    // get API, get data from DataBase
+            app.get('/users/:id', async (req, res) => {
+                const id = req.params.id;
+                const query = { _id: new ObjectId(id)};
+                const result = await usersCollection.findOne(query);
+                res.send(result);
+            })
+
+            //post API, get data from react & save to DB
+            app.post('/users', async (req, res) => {
+                const newUser = req.body;
+		newUser.createdAt = new Date();//For date/Time
+                const result = await usersCollection.insertOne(newUser);
+                res.send(newUser);
+            })
+
+	    // Update Database Data
+            app.put('/users/:id', async (req, res) => {
+                const id = req.params.id;
+                const updatedUser = req.body;
+                
+                const filter = { _id: new ObjectId(id) };
+                const updateDoc = {
+                    $set: {
+                        name: updatedUser.name,
+                        email: updatedUser.email
+                    }
+                };
+                const result = await usersCollection.updateOne(filter, updateDoc);
+                res.send(result)
+            })
+
+            // Delete User from DB
+            app.delete('/users/:id', async (req, res) => {
+                const id = req.params.id;
+                const query = { _id: new ObjectId(id) };
+                const result = await usersCollection.deleteOne(query);
+                res.json(result);
+            })
+
+            //send FILES/IMAGES to database
+            app.post('/doctors', async (req, res) => {
+                //access body from file
+                const name = req.body.name;
+                const email = req.body.email;
+                
+		//access image from file 
+                const image = req.files.image;
+                const imageData = image.data;
+                const encodedImage = imageData.toString('base64');
+                const imageBuffer = Buffer(encodedImage, 'base64');
+                
+		//make an object of informations snd send to DB
+                const doctorInfo = {
+                    name: name,
+                    email: email,
+                    phone: phone,
+                    image: imageBuffer
+                }
+                //send to DB
+                const result = await doctorsCollection.insertOne(doctorInfo);
+                //send the response
+                res.send(result);
+            })
+        }
+        finally {
+            // await client.close();
+        }
+    }
+    run().catch(console.dir);
+
+
+
+
+~ PAGINATION:
+	.In nodeJS index.js:
+                app.get('/products', async (req, res) => {
+                const page = req?.query?.page;
+                const itemPerPage = parseInt(req?.query?.size);
+                const options = {
+                    skip: page * itemPerPage,
+                    limit: itemPerPage,
+                }
+                const count = await productsCollection.countDocuments();
+                let cursor;
+                if(page){
+                    cursor = productsCollection.find({}, options);
+                }
+                else{
+                    cursor = productsCollection.find({});
+                }
+                let products = await cursor.toArray();
+                res.send({
+                    count,
+                    products,
+                });
+            })
+
+	.In REACT
+  	   <div className='pagination'>
+              {
+                [...Array(pageCount).keys()]
+                  .map(index => <button
+                    key={index}
+                    onClick={() => setPage(index)}
+                    className={page === index ? 'selected' : ''}
+                  >{index}</button>)
+              }
+            </div>
+	
+
+
+
+
+~ $in (to find key of an collection of value of array ) :
+	    .in react
+    	    fetch('http://localhost:5000/products/byKeys', {
+                method: "POST",
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(savedCartKeys)
+            })
+	    .then();
+	    
+	    .in index.js
+            app.post('/products/byKeys', async (req, res) => {
+                const savedCartKeys = req.body;
+                const query = {key: {$in: savedCartKeys}}
+                const products = await productsCollection.find(query).toArray();
+                res.send(products);
+            })
+
+
+
+
+
+
+
+
+
+*****_____ EXTRA_____*****
+
+~ File Upload
+	.js area
+  	const [image, setImage] = useState(false);
+
+  	const imageHandler = (e) => {
+    	     setImage(e.target.files[0]);
+  	}
+
+	.html area
+	<label htmlFor="file-input">
+             <img src={image ? URL.createObjectURL(image) : uploadArea} className='addproduct-thumbnail-img' alt="" />
+        </label>
+
+
+~ Trnaslate, translation, internationalization, i18n
+	. npm install react-i18next i18next --save
+	. npm i i18next-browser-languagedetector
+	. npm i i18next-http-backend@1.0.10
+	
+	. import i18n.js file in main.jsx
+
+	. create i18n.js in src directory
+	// in i18n.js file
+	import i18n from "i18next";
+	import { initReactI18next } from "react-i18next";
+	import LanguageDetector from "i18next-browser-languagedetector"
+
+	i18n.use(LanguageDetector).use(initReactI18next).init({
+    	    debug: true,
+    	    lng: "en",
+    	    resources: {
+        	en: {
+		     translation: {
+		    	greeting: "Assalamu Alaikum, (Peace be upon you)"
+		    } 
+        	},
+		ar: {
+		     tranlation: {
+		    	 greeting: "السلام عليكم"
+		    }
+            	   
+        		  },
+    	   }
+	})
+	export default i18n;
+	
+	//in LanguageSelector.jsx (createanywhere)
+        import { useTranslation } from "react-i18next"
+
+        const languages = [
+            {
+                code: "en",
+                lang: "English"
+            },
+            {
+                code: "bn",
+                lang: "বাংলা"
+            },
+            {
+                code: "ar",
+                lang: "عربي"
+            	    },
+        ]
+
+        export default function LanguageSelector() {
+            const { i18n } = useTranslation();
+
+            const changelanguage = lang => {
+                i18n.changeLanguage(lang.code);
+            }
+
+            return (
+                <div >
+                    {
+                        languages.map(lng => {
+                            return (
+                                <button
+                                    key={lng.code}
+                                    onClick={() => changelanguage(lng)} >
+                                    {lng.lang}
+                                </button>
+                            )
+                        })
+
+                    }
+                </div >
+            )
+        }
+
+
+
+~ Redux Nextjs setup
+	. npm install @reduxjs/toolkit react-redux
+	
+	. lib/store/store.js
+        import { configureStore } from '@reduxjs/toolkit'
+        import counterReducer from './features/counter/counterSlice'
+
+        export const makeStore = () => {
+            return configureStore({
+                reducer: {
+                    counter: counterReducer,
+                },
+            })
+        }
+
+	. app/StoreProvider.js
+        'use client'
+        import { useRef } from 'react'
+        import { Provider } from 'react-redux'
+        import { makeStore } from '../lib/store/store'
+
+        export default function StoreProvider({ children }) {
+            const storeRef = useRef()
+
+            if (!storeRef.current) {
+                storeRef.current = makeStore()
+            }
+
+            return <Provider store={storeRef.current}>{children}</Provider>
+        }
+
+	. wrap component(wherever we need) by StoreProvider
+	<StoreProvider>
+          {children}
+        </StoreProvider>	
+
+
+	. lib/store/hooks/hooks.js
+        import { useDispatch, useSelector, useStore } from 'react-redux'
+
+        // Use throughout your app instead of plain `useDispatch` and `useSelector`
+        export const useAppDispatch = useDispatch.withTypes()
+        export const useAppSelector = useSelector.withTypes()
+        export const useAppStore = useStore.withTypes()
+
+	. lib/store/features/counterSLice.js
+        import { createSlice } from '@reduxjs/toolkit'
+
+        const initialState = {
+            value: 0,
+        }
+
+        export const counterSlice = createSlice({
+            name: 'counter',
+            initialState,
+            reducers: {
+                increment: (state, action) => {
+                    state.value += 1;
+                },
+                decrement: (state, action) => {
+                    state.value -= 1
+                }
+            },
+        })
+
+        export const { increment, decrement } = counterSlice.actions
+        export default counterSlice.reducer
+
+	. For use, any components where is needed
+	.. in js area
+	const dispatch = useAppDispatch();
+  	const count = useAppSelector((state) => state.counter.value)
+	
+	.. in html area
+	<p> Count is: {count} </p>
+	<button onClick={() => dispatch(decrement())}> - </button>
+	<button onClick={() => dispatch(increment())}> + </button>
+
+
+
+
+
+
+
+
+
+*****_____Language Translation With GOOGLE_____*****
+
+~ Google api key 
+https://wwwcloud.google.com
+
+* step 1: Enable translation API
+-> console -> search for cloud translate api -> Enable 
+
+
+
+
+~ react-google-multi-lang
+Link: https://www.npmjs.com/package/react-google-multi-lang
+
+
+
+
+
+
+
+
+****** Prisma ******
+
+npm i prisma
+npx prisma init 
+npm prisma db push
+
+Comprehensive Guide to Using Prisma ORM with Next.js
+https://www.prisma.io/docs/orm/more/help-and-troubleshooting/nextjs-help
+
+
+~ React Query instead of useEffect
+tanstack for query
+
+* useQuery() for fetching data
+    const { data:products, isLoading } = useQuery({
+        queryKey: ["getAllProducts"],
+        queryFn: async () => {
+            return await getAllProductsAction();
+        }
+    })
+
+* useMutation() for delete, update, create
+    const { mutate: createPost, isPending } = useMutation({
+        mutationKey: ["createPost"],
+        mutationFn: async () => createPostAction({ text, isPublic, mediaType, mediaUrl })
+    })
+
+* useQueryClient() to use another function's queryState
+    const queryClient = useQueryClient();
+	
+    onSuccess: () => {
+       queryClient.invalidateQueries({ queryKey: ["getAllProducts"] })
+    }
+
+
+
+~ prisma, postgresql
+	npx prisma db push
+	
+
+	* find one item
+    const currentProduct = await prisma.product.findUnique({
+        where: {
+            id: params.id,
+            isArchived: false,
+        }
+    })
+
+	* find many item
+    const products = await prisma.product.findMany({
+        where: {
+            isArchived: false,
+            id: { not: currentProduct.id },
+        },
+        take: 4,
+    });
+
+
+	* 
+    const posts = await prisma.post.findMany({
+        include: {
+            comments: {
+                include: {
+                    user: true,
+                },
+            },
+            likesList: {
+                where: {
+                    userId: user.id,
+                }
+            }
+        },
+    });
+
+
+# setup type
+type PostWithComments = Prisma.PostGetPayload<{
+  include: {
+    comments: {
+      include: {
+        user: true,
+      },
+    },
+    likesList: true,
+  }
+}>
+
+
+
+
+
+~ kinde
+
+* get current user, client side
+const { user } = useKindeBrowserClient();
+
+
+* get current user server side
+const { getUser } = getKindeServerSession();
+const user = await getUser();
+
+
+
+
+~ stripe
+	stripe listen --forward-to http://localhost:3000/api/webhooks/stripe
+
+payment catalog
+add product
+open it
+create payment link
+create the link
+copy it and save it to env file
+NEXT_PUBLIC_STRIPE_DEV_MONTHLY_URL=link here
+NEXT_PUBLIC_STRIPE_LIVE_MONTHLY_URL=
+just use the link to redirect to add payment method
+
+go to developer option, https://dashboard.stripe.com/test/developers
+webhooks (install and login stripe cli to run stripe in local first)
+using cli command get, STRIPE_WEBHOOK_SECRET_LIVE_KEY=
+from api key get, STRIPE_SECRET_KEY=
+
+npm install stripe
+
+// initialize stripe
+create stripe.ts under src->lib->stripe.ts
+import Stripe from 'stripe';
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
+    apiVersion: "2025-02-24.acacia",
+    typescript: true,
+});
+
+
+src->app->api->webhook->route.ts
+//events
+
+* set billing
+	- product catalog -> product -> select default item -> upsell
+	- customer profile -> subscription -> customer can switch plans -> set up plans
+	- get the link from customer profile, use it to redirect user to their billing using their email
+
+
+
+
+~ send email
+	npm i resend
+	npm i @react-email/components
+	npm i react-email
+
+	get resend api key
+	create a file, paste the demo code from react-email
+	
+	// from resend docs
+        await resend.emails.send({
+            from: "OnlyHorse <onboarding@resend.dev>",
+            to: [customerDetails.email],
+            subject: "Subscription Confirmation",
+            react: WelcomeEmail({
+                userEmail: customerDetails.email,
+                userName: user.name,
+                subscriptionStartDate: subscription.startDate,
+                subscriptionEndDate: subscription.endDate,
+            }),
+        });
+
+
+
+
+
+// redirect user to homepage
+window.location.href = "/";
+
+// partial
+const updatedFields: Partial<User> = {};
+
+// update the cache
+	revalidatePath("/update-profile");
+
+//
+Math.max(post.likes - 1, 0)
+
+// useOptimistic to hanle react/likes
+
+// prefilled
+	window.location.href = stripeUrl + "?prefilled_email=" + user.email;
+
+
+// get the params
+    const searchParams = useSearchParams();
+    const orderId = searchParams.get("orderId") || "";
+
+// change in script to run other package
+	"email": "email dev --dir src/emails"
+
+
+// favicon.ico 256x256

@@ -1,0 +1,978 @@
+!!!!!!!!!!!!!!!!!!!!!! ... HTML ... !!!!!!!!!!!!!!!!!!
+... html basics
+... css basics
+
+... audio tag
+... video tag
+
+....... about semantic tag
+
+... table tag
+	... thead, th, tbody, tr, td
+	... td border collapse/seperate
+
+... form tag
+	... input type
+	... field set
+		... legend
+	... paragraf tag
+		... label
+	            ... input type
+	... textarea tag
+	... button
+
+... nav tag
+	... ul, li
+		... ancor tag
+
+... svg tag(for vector design)
+	...rect tag, circle tag, path
+
+... less then sign '<' : &lt
+
+
+~ select, dropdown
+	<select value={productDetails.category} onChange={changeHandler} name="category" className='addproduct-selector'>
+          <option value="women">Women</option>
+          <option value="women">Men</option>
+          <option value="women">Kid</option>
+        </select>
+
+
+
+
+
+
+!!!!!!!!!!!!!!!!!!!!!! ... CSS ... !!!!!!!!!!!!!!!!!!
+
+/* > used for immediate successor */
+nav > ul{
+    
+}
+
+
+/*Collapse/onClik show more details, With Tailwind and DaisyUI */
+install tailwind + daisyUI
+
+<div
+    style={{ boxShadow: "0px 0px 5px 4px #dddddd", borderRadius: "0px" }}
+    className="collapse w-11/12 px-8 mb-5">
+    <input type="checkbox" />
+
+    <div
+       className="collapse-title  font-semibold">
+       <i className="text-[#008dda] me-3 fa-solid fa-clock"></i>
+       Click On Me
+    </div>
+
+    <div className="collapse-content">
+         <p className="pt-3 mb-3 border border-t-2 border-b-0 border-l-0 border-r-0 border-gray-400">SAIN Courier provides an unique tracking code for your every consignments. Through our website you can learn the current status of the products and stay up to date.</p>
+    </div>
+</div>
+
+
+
+/* For curved rectangle / svg */
+	SVG Path Builder / Anthony Dugois
+	getwaves.io
+
+
+/* make every list item horaizontal from vertical */
+    	    display: flex;
+	or, float: right;	
+
+/* position */
+    position: relative;
+    top: -30px;
+    left: 20px;
+	--element move its position according to its previous position
+
+    position: absolute;
+    top: -30px;
+    left: 20px;
+	--element move its position according to its parent container area
+
+   *Position fixed for navbar / Header
+    <div className='bg-white text-[#1f1f1f] p-5 w-full fixed left-0 top-0 z-10'>
+       <Header />
+    </div>
+    <div style={{marginBottom: "65px"}}></div>
+
+/* points before the lists will be gone or, used for unstyled list items */
+    list-style: none;
+
+
+/* remove the underscore of a anchor tag */
+    text-decoration: none;
+
+
+/* if we hover on li, ul values will show */
+nav > ul > li:hover ul{
+    display: block;
+}
+
+/* item will disappear permanently */
+            display: none;
+
+
+/* item will not show, but available on the screen */
+            visibility: hidden;
+
+/* overflow */
+	    overflow : scroll;
+	or  overflow-y : scroll;
+	or  overflow-x : hidden;
+
+        or  overflow : hidden;
+	    text - overflow : ellipsis(show ... for extra texts)
+
+	
+/* wrapping */
+	  white-space : nowrap
+
+
+/* Transform */
+	  transform: translate(50px) scale(0.50) rotate(45deg)
+
+/ Transition */
+	  transition: width 2s, height 2s, transform 5s, ease-out-in;
+
+/* animation */
+	  @keyframes slide {
+            from{
+                background-color: darkgreen;
+                left: 0px;
+                top: 0px;
+            }
+
+             to{
+                top: 350px;
+                background-color: red;
+            }
+        }
+
+	    animation-name: slide;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-play-state: running;
+
+/* float, max,min-height, cursor */
+	  float: left;(vertical to horizontal from left - right)
+	  float: right;
+	  max-height: 500px;(for maximum height)
+	  min-height: 200px;
+	  cursor: pointer;(for change the cursor)
+
+
+/* font size */
+	 font-size: 3em; (make text larger)
+
+/* justify-content(horizontally), align-items(vertically) */
+	  justify-content: center; (move item at center)
+	  justify-content: flex-end; (move item to the right side)
+	  justify-content: space-between; (make space between item)
+	  
+	  align-items: self-end; (move item to bottom, vertically)
+	  align-items: center; (move item to center, vertically)
+	  align-item: stretch; (make item strachable vertically)
+
+
+/* flex-grow */
+	  flex-grow: 1;(make item flexible)
+	  flex-direction: column; (arrange item vartical wise)
+	  flex-wrap: wrap;
+
+
+/* order */ (change the order og=f items)
+	  order: 2;
+	  order: 1;
+
+/* grid */
+	display: grid;
+
+	grid-template-columns: 200px 200px;
+	grid-template-columns: repeat(4, 200);
+	grid-template-columns: repeat(4, 25%);
+	grid-template-columns: repeat(4, 1fr);
+
+	grid-gap: 10px; (gap coloumn wise)
+        grid-gap: 30px 10px; (30px gap row wise, 10px column wise)
+
+
+/* css breakpoint(media query) */
+	@media (max-width: 700px) {
+            .food{
+                background-color: lightgray;
+            }
+        }
+
+        @media (min-width: 900px){
+            .food{
+                background-color: palegoldenrod;
+            }
+        }
+
+
+
+/* specifity */
+/* CSS custom property */
+	:root {
+	    --color: red;
+	}
+	p{
+	    color: var(--color);
+	 }
+
+
+
+/* bootstrap grid system */
+	class=row
+	    class=col
+	    class=col
+	    class=col
+
+
+
+
+/* pseudo element */
+	class/id/tag_name:: before{
+		content: 'open-quote';
+		color: red;
+		font-size: 2em;
+	}
+	class/id/tag_name:: after{
+		content: 'close-quote';
+		color: red;
+		font-size: 2em;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+!!!!!!!!!!!!!!! ... JAVASCRIPT ... !!!!!!!!!!!!!!!
+
+//dynamic type language
+
+~ Console:
+	console.log('Write Something'); //regular
+	console.warn('Write Something'); // used to show warning
+	console.error('Write Something'); //Used to show error	
+	
+	//show the data in table
+	console.table(data);
+	//make a table only with name, id, age
+	console.table(data, ['name', 'id', 'age']);
+
+
+
+
+//Variable(var, let, const)
+	-numeric
+	-string
+	-boolean
+	-undefined
+
+//String :
+	string quotation: '', "", 
+	template string : `hi i am bla bla bla`;
+	print : `my name is ${firstName} ${secName}`;
+
+	*var str = str1 + str2;
+	s1.concat(s2);
+	
+	*str.toUpperCase();
+	*str.toLowerCase();
+
+	s1 = 'abc def ghi';
+	if(s1.indexOf('def') != -1) -> def avl in string s1
+	if(s1.includes('def') == true) -> def avl in string s1
+
+	*s1.startsWith(s2);
+	s1.endsWith(s2);
+
+	*s = 'ab cd ef gh';
+	let s2 = s.split(' ').join('_');//s string splited by space added by underscore
+
+	*s.slice(2, 5);//return 2 to 5(excluded) index characters
+	s.substring(2, 5)////return 2 to 5(excluded) index characters
+	*s.substr(2, 5);//return total 7 character, from 2nd index
+	s.substr(2);//return whole string from 2nd index
+
+	*string & number :
+		var a = 1;
+		var b = '2';
+		var s = a+b; //s = 12;
+		console.log(a + b); //12
+
+	*String to integer :
+		var num = parseInt(str);
+
+/* ARRAY */
+	*Array.form(arrToConvert, mapFunc, ThisOp);//convert anything -> array
+
+	*arr.sort();
+	arr.sort(function(a, b){return a-b});
+	*rr.reverse();
+
+	*if(Array.isArray(arr)); -> check if it is array or not
+	
+	*arr.indexOf(n) -> return the index number of n's value
+	arr.includes(n) -> return true value
+
+	*let arr = a1.concat(a2);//add multiple array
+
+	*var arr = []; //empty array
+	var arr = [1, 2, 4, 5, 2];
+	console.log(arr); //[ 1, 2, 4, 5, 2 ]
+	
+	// spread or rest operator (...) 3 dots
+	console.log(...arr); // 1 2 4 5 2
+
+	*slice (main array will not change) :
+	let a = arr.slice(1, 4);//from 1 to 4(excluded) [2, 4, 5]
+
+	*splice (delete any portion of array) :
+	let a = arr.splice(1, 2);//delete 2 element from index 1
+	a = [2, 4];
+	arr = [1, 5, 2];
+
+	add item to array using splice :
+	let arr = [1, 2, 3];
+	let a = arr.splice(1, 0, 3, 5, 9);//3,5,9 add at 1st index
+	a = [nothing is deleted]
+	arr = [1, 3, 5, 9, 2, 3];
+
+	*push, pop; add/delete element at last
+		var arr = [1, 2];
+		arr.push(4);
+		arr.push(5); //new array [ 1,  2, 4, 5 ]
+		arr.pop(); //new array [ 1,  2, 4 ]
+
+	*remove item at first
+		arr.shift();
+	*add item at first
+		arr.unshift(99);
+
+	/* copy array */
+ 	//reference,shallow copy
+	let arr2 = arr1;//both point to same memory address
+	
+	//Deep copy
+	let arr2 = [...arr1];//both point to different memory address
+
+	let arr1 = [3, 4];
+	let arr2 = [2, ...arr1, 6];//[2, 3, 4, 6]
+
+	* Destructuring in Array
+		const [a, b, c] = [2, 5, 7, 9];
+		print(a) = 2;
+		print(b) = 5;
+		print(c) = 7;
+
+	* Includes:
+		array.includes(“bea”)
+
+//array of strings
+	var arr_str = ['Hi', 'this', "is", "a", "book"];
+
+	*let a = ['a', 'b', 'c'];
+	let s = a.join('.'); //a.b.c
+
+//array size : console.log(arr.length); //5
+
+
+//indexOf();
+	console.log(arr.indexOf(4)); //return index of value 4
+	console.log(arr_str.indexOf('is')); //2
+
+//tyoeof :
+	console.log(typeof str1); //string
+	console.log(typeof num); //number
+	// more: boolean, undefined, object
+	
+	if(typeof num == 'number'){
+		//code
+	}
+
+//Date method :
+	*var date = new Date();
+	*compare date :
+	if(date1 < date2)....
+	or, if(date1.getTime() < date2.getTime()).....
+	*momentjs.com
+
+//toFixed(2); used to control digits after decimal point
+	var num = 2.333333;
+	console.log(num.toFixed(2)); //2.33
+
+/* Function in javaScript :
+	*parameters are array like object
+	find length, apply for looop on argument possible
+
+	*function sum(){...}//no parameter
+
+	*function sum(n1, n2){...}//with parameter
+
+	//if 2nd parameter not passed, n2 can be 0, [], '' or anyValue
+	*function sum(n1, n2 = 0){...}// n2=[], n2='', 
+
+	*//Both works same
+	let sum = function sum(){...}
+	sum(1, 2);
+
+	//Called anonymous func.
+	*let sum = function(n1, n2){...}
+	sum(1, 2);
+
+	*//arrow func
+	let sum = () => 'hi'; //no parameter. return auto
+	let sum = n1 => n1+n2; //single parameter no bracket, return auto
+	let sum = (n1, n2) => n1+n2;// return auto
+	let sum = (n1, n2) => {....}//no auto return in multiple line case
+	
+
+/* Object in java sript */code avl
+	
+	//check if key available in object
+	if(keyName in objectName){..}
+
+	//delete key from object
+	delete objName[keyName];
+
+
+	*There are different ways to declare and initialize object
+		1. Normal way
+		2. object way
+		3. class, function way
+
+	*Functions in object
+		const obj{
+			id: 1236;
+			func_name: function(x){
+				x = this.id;
+				..... ... ...
+			}
+		}
+	obj.func_name(x);
+	//So, to access an object's inner values from func, use 'this.'
+
+
+	var student = {
+ 		property/key: Value,
+    		id: 1236,
+    		name: 'Samius Sazin',
+    		university: 'DIU',
+    		cgpa: 3.88
+	}
+	console.log(student);//{id:1236, name: 'Samius Sazin',
+	university: 'DIU', cgpa: 3.89 }
+	console.log(student.name); //Samius Sazin
+
+	//both are same
+	student["cgpa"] = 3.89;
+	student.cgpa = 3.90;
+	console.log(student.cgpa); //3.90
+
+	* copy object
+		..Shallow Copy
+		//here both points to same location,
+		  so changes in one, reflects other
+		let x = {.......};
+		let y = x;
+		
+
+	* destructuring in object
+		const stu = {id:12, name:sami, age:21};
+	
+		//access element of an object
+		print(stu.id);
+		print(stu.name);
+		print(stu.age);
+
+		or,	
+		const id = stu.id;
+		const name = stu.name;
+		const age = stu.age;
+		print(id, name, age);
+
+		or, (appropriate), serial doesn't matter,
+		const {name, id, age} = stu;
+		print(id, name, age);
+
+		*object of object
+		const stu = {
+			id: 12,
+			name: sami,
+			versity: {join: '1Year', subj: 'cse', end:'3Year'},
+			age: 21;
+		};
+
+		//access element
+		print(stu.versity.join, stu.versity.subj);
+
+		or,
+		const subj = stu.versity.subj;
+		const join = stu.versity.join;
+		print(join, subj);
+
+		or,
+		const {subj, join, end} = stu.versity;
+		print(join, subj, end);
+
+		* chaining in destructuring
+		print(stu?.school?.class);
+		//as school,class are not avl in obj. so it occurs error
+		//to prevent error we use '?' character.
+
+	* const keys = object.keys(objName); //return an array of keys
+	* const values = object.values(objName); //return an array of values
+
+	* object of array, is also possible
+
+	* FUNC receive a function of objOne's function
+	  where objOne's func has objTwo's 'this' value
+
+	  const FUNC = objOne.func.bind(objTwo);
+	  FUNC();
+
+
+
+
+//array of object :
+        var phone =[{nam:'ipon', price:100}, {nam:'ggl', price:90}, {nam:'xiaomi', price:50}];
+        var cheap_phone = phone[0];
+        for(const k of phone){
+            if(k.price < cheap_phone.price){
+                cheap_phone = k;
+            }
+        }
+        console.log(cheap_phone); //{ nam: 'xiaomi', price: 50 }
+
+/*  map function : 
+	//map takes each element from array, pass the value to the func.
+	//here arr.length = arr2.length
+	const arr2 = arr.map(function);
+	const arr2 = arr.map(n => n*2);
+
+/* filter function :
+	-similar as map
+	-map takes every element, do operation
+	return them and form a new array
+	as same length as previous one
+	-but filter takes every value from array,
+	do operation, return them which match the
+	conditions and form new array with new values,
+
+	//form arr2 with those values, which are smaller then 10
+	//here arr.length & arr2.length may equal or not 
+	const arr2 = arr.filter(f => f<10);
+	
+	//takes an object, do operation with it, return what it take(object)
+	  and make an array with all return value.
+	const arr = stu.filter(f => f.age==21);//return f, not f.age
+
+/* find function :
+	//return the element only, not an array
+	//if multiple element fullfil the condition then return the first element
+	const element = stu.find(f => f.age == 21)
+
+
+// abs, ceil, floor, round, random :
+	let n = Math.abs(-10);// n = 10
+	const n = Math.random();// gives number from 0-1
+
+//swap
+	var p = 5;
+	var q = 9;
+	[p, q] = [q, p];//P = 9 Q = 5
+
+/* isNaN() : if(isNaN(num) == true) then num contains character
+
+/* lOOps */
+	. for, while, doWhile
+	. for of (appropriate for arr like things)
+	. for each
+	. fon in (apply on object)
+for of:
+	for(let i of arrname){
+		print(i);
+	}	
+
+for each:
+	arr.forEach(parameter);//pass parameter to a funtion
+	//Al are same
+	arr.forEach(function(argument){..code..});
+	arr.forEach(argument => {..code..});
+	arr.forEach((arg, arg2) => {..code..});
+
+for in :
+	for(const prop in student){...} //student is an object
+
+
+/* max, min */
+	Math.max(1, 2, 3......more);
+	Math.min(1, 2...... more);
+	Math.max(...arrayName);//need ... to find max,min in array
+
+
+* Turnery operator:
+	const x = (a > b) ? "a big" : "b big";
+
+	//shortcut of turnery operator
+	//if 1st condition true then 2nd func will be called
+	(a > b) && callFuncA();
+	
+	//if 1st condition false then 2nd func will be called
+	(a > b) || callFuncB();
+
+* Toggle Boolean :
+	let x = true;
+	x = !x;
+
+
+
+/*!!!!!!!!!!!!!.....OOOP......!!!!!!!!!!!*/
+class Student{
+	name;
+	id;
+	age;
+	constructor(){}
+	constructor(name, id, age){
+		this.name = name;
+		this.id = id;
+		this.age = age;
+	}
+	//normal func
+	printData(){
+		print(this.name);
+		print(this.age);
+		print(this.id);
+	}
+}
+
+//Inheritance
+class Alumni extends Student{
+	job;
+	pass_year;
+	constructor(){}
+	print(){}
+	.....
+}
+
+
+
+/* API */
+	const a = JSON.stringify(objName);
+	const b = JSON.parse(stringified_Obj);
+
+	. JSON
+	. Fetch(get, post, put, patch, delete)
+
+	jason placeholder
+	kanya api
+	randomuser.me
+	restcountries.eu
+
+*how to fetch -> normal/ async-await :
+const loadDetails = async id => {
+or.
+async function LoadDetails(int id) {
+
+    //method 1
+    fetch(url)
+    .then(res => res.json())
+    .then(data => consol.log(data);
+
+    //method 2, need async infront of parameter of the function
+    const res = await fetch(url);
+    const data = await res.json();
+    consol.log(data);
+}
+
+
+
+/**..... ......**/
+~ Javascript is a Dynamic Type Programming language
+
+~Data Types:
+   	2 category - primitive, non-primitive
+	1. Primityve type data types
+		Number
+		string
+		boolean
+		undefined
+		null
+		symbol	
+	2. non-primitive type data types
+		object
+
+~ let x=''; if(x) -> return false value
+~ [], {} empty array/object -> returns true
+~ null, undefined, NaN -> return false
+~ a=2; b='2';
+	if(a == b) -> return true value
+	if(a === b) -> return false
+// '==' just check the value, '=== check variable data type
+
+~ a = []; b = [] if(a == b) or if(a === b), return false, 
+	both arr & obj works as reference we cant compare them by
+	== or === operator.
+
+~ var car = 10; declare variable using var, is_not_a_block_scope
+	become_a_function_scope, this process called hoisting
+
+*car = 10; declare variable without const, var, let,
+	the variable become global, this process called global licking
+
+*Appropriate let, const
+	let, const remains in block(called block scope)
+	var does not remains in block(called local scope)
+	declare variable without var/const/let become global(global scope)
+
+~ inner function can access outer functions variables,..called laxical scoping
+
+******** imp** Closure : func with in func(exmpl avl in js api closure)
+
+~ call back function:
+	call a function(f1), pass a function(f2) as parameter
+	then within the function(f1), call the function(f2())
+	
+	func f1(f){ f(); }
+	func f2(){...}
+	f1(f2); //call f1 func, pass f2 func as parameter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*****_____ HTML + JavaScript_____*****
+
+~ Get any tag access of html in js
+	//get element by it's ID
+	const el = document.getElementsById('id_name');
+
+	//get elements by tag name
+	const el = document.getElementsByTagName('h2');
+	
+	//Querry selector, returns a element
+	const el = document.querySelector('.blog');
+
+	//QuerySelectorAll will return a nodeList
+	const el = document.querySelectorAll('.blog');
+	
+	.Shortcut
+	document.getElementById('id_name'); //returns the element
+	$('#id_name'); // do the same, returns the element
+
+** DOM methods(used to get html elements from js)
+	getElementById()
+	getElementByClassName()
+	getElementByTagName()
+	querySelector()
+	querySelectorAll()
+
+
+
+~ Create A New Html Element/Tag :
+	//create li tag
+	const li = document.createElement('li');
+
+	//select where to create
+	const ul = document.getElementById('class/id/tag name');
+
+	// connect
+	ul.appendChild(li);//adding 
+
+
+
+~ Get/ Set attribute:
+	//get
+	el.getAttribute('id'); 
+
+	//Set
+	varNAme.setAttribute('class', 'class_name');
+	varName.setAttribute('src', URL);
+
+
+
+~ parent, child node:
+	el.parentNode; //get the parent node
+	el.childNode; //get the child node
+
+
+
+~ Clear the load area:
+	//Clear all the text contents of a node and all its descendants
+	search_result.innerHTML =``;
+	or,search_result.textContent = '';
+	
+
+
+~ Add class to a element
+	el.classList.add('class_name');
+	el.setAttribute("class", "class_name");
+	el.className = "class_name";
+
+
+
+
+~ Event Handler : (REACT)
+	// Handlers
+	. onClick
+	. onChange
+	. onBlur
+	. onFocus
+	. onSubmit
+
+
+	* //prevent page to reload
+	     e.preventDefault();
+
+
+	* //add onSubmit :
+ 	return (
+	  <div>
+             <form onSubmit={handleRegisterButton}>
+                <input type='submit' value='Register'/>
+             </form>
+    	  </div>
+  	);
+
+
+
+
+*** TEARMS ***
+// event.target, event.target.parentNode, event.target.value
+// document.getElementById('id_name').disabled = true;
+// document.getElementById('id_name').onclick = func();
+// parent.appendChild(h3);
+// window.location.href = 'second_page.html';
+
+
+
+
+
+
+
+?????NEW?????
+~ accent-color, caret color:
+	change colors of text box blinking cursor etc.
+
+~ Center an absolute element:
+  display absolute, inset 0, margin auto, w-10, h-10
+  display absolute, w-10, h-10, left-50%, top-50%, translate 50% 50%
+
+~ Css clip path for images
+
+~ sparkless emoji ✨
+
+~ get the current mouse position/index
+e.clientX
+e.clientY
+
+~ returns a DOMRect object that bounds the contents of the range
+e.target.getBoundingClientRect();
+
+
+~ max-w-fit : take the content area only, not whole width
+
+
+
+
+
+
+
