@@ -1,0 +1,324 @@
+*****_____INSTRUCTIONS_____*****
+
+1. New Topic Starts with *****_____ name _____*****
+2. main topic starts with ~, ~~.
+3. sub topic start with *, ** or *** etc.
+4. if sub topic has part, starts with '.' one dot.
+5. important topic under sub topic starts with '..' double dot
+6. If any topics exampl code avl, path will be written before the topic with
+	exmpl: < js.api.closure >
+7. main topic has 4 space between them
+8. sub topic has 1 space between them
+
+
+
+*****_____ Basics _____*****
+
+~Pandas
+
+# read file 
+import pandas as pd
+dataset = pd.read_csv(r"file_path")
+dataset.head(3)
+
+# Total rows & columns
+dataset.shape
+
+# Show numbers of Null Value
+dataset.isnull().sum()
+
+# total null values in the whole dataset
+dataset.isnull().sum().sum()
+
+# findout the % of nul value in each column
+dataset.isnull().sum() / dataset.shape[0] * 100
+
+# datatype of each column in dataset
+dataset.info()
+
+# select columns using data types and then then show them
+dataset.select_dtypes(include="float64").columns
+
+# convert arr to dataframe
+dataframe = pd.Dataframe(arr, columns=["columnName1", "columnName2"])
+
+# Show how many different types of values are in Manufacturer Column
+dataset["Manufacturer"].unique()
+
+
+~ Seaborn, Matplotlib
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+sns.heatmap(dataset.isnull())
+plt.show()
+
+
+
+
+
+~ Handle Missing Values
+
+# Way 1: Delete column if more then 50% data is missing
+# Way 2: Delete rows with missing values
+# Way 3: Fill with new data
+
+* way 1: dataset.drop(columns=["Gear box type", "Color"], inplace=True)
+
+* way 2: dataset.dropna(inplace=True)
+	 # drop the rows of null values only in manufacturer column
+	 dataset.dropna(subset=["Manufacturer"], inplace=True)
+
+* way 3: 
+	. dataset.fillna(10)
+	. forward filling and backword filling
+		dataset.fillna(method="bfill", axis=0).head(3)
+		dataset.fillna(method="ffill", axis=0).head(3)
+
+
+
+** Way 3 cont., fill null values
+from sklearn.impute import SimpleImputer
+
+#get the columns of float64 & int64 datatype
+missing_value_columns_float64 = dataset.select_dtypes(include="float64").columns
+missing_value_columns_int64 = dataset.select_dtypes(include="int64").columns
+
+# merge them both
+missing_value_columns = missing_value_columns_float64.union(missing_value_columns_int64)
+
+# select 'mean' from simpleimputer to change the missing values
+si = SimpleImputer(strategy='mean')
+
+# convert the missing values, and returns an array 
+# si.fit_transform(dataset[['Prod. year', 'Cylinders']])
+arr = si.fit_transform(dataset[missing_value_columns])
+
+# make new data frame from array of filled columns
+newDataFrame = pd.DataFrame(arr, columns=missing_value_columns)
+
+newDataFrame.head(5)
+
+
+
+
+
+~ One Hot Encoding (For Ordinal Data)
+# Converting Categorical Data to Numerical Data
+
+# fill the null values using mode
+dataset.fillna({"Leather interior": dataset["Leather interior"].mode()[0]}, inplace=True)
+dataset.fillna({"Wheel": dataset["Wheel"].mode()[0]}, inplace=True)
+
+# take those columns where we will perform encoding in a variable
+en_data = dataset[["Leather interior", "Wheel"]]
+
+* Using get_dumies to perform one hot encoding, return true, false
+pd.get_dummies(en_data)
+
+
+
+
+
+
+** using scikit learn, 
+# import oneHOtEncoder from scikit learn's preprocessing 
+from sklearn.preprocessing import OneHotEncoder
+
+# create an object of oneHotEncoding
+ohe = OneHotEncoder()
+
+# transform all categorical data to numerical and it returns an array
+arr = ohe.fit_transform(en_data).toarray()
+
+# convert the array to dataset
+newDataSet = pd.DataFrame(arr, columns=["Leather interior yes", "Leather interior no", "Left wheel", "Right wheel"])
+newDataSet.head(5)
+
+
+
+
+
+** Label Encoding (For Nominal Data)
+
+# applying Label Encoding
+# import label encoder from preprocessing of sklearn
+from sklearn.preprocessing import LabelEncoder
+
+le = LabelEncoder()
+
+# convert nominal data to numerical data, it returns an array
+# store it in main dataset in a new column called manu_facturer
+dataset["manu_facturer"] = le.fit_transform(dataset["Manufacturer"])
+
+dataset[["Manufacturer", "manu_facturer"]].head(5)
+
+
+
+
+** Ordinal Encoding (For Nominal Data) - preferable
+	.way 1: Scikit Learn
+	.way 2: Map function
+
+*Way 1: Sckit Learn
+# use sckit learn
+# import ordinary encoding from sckit learn
+from sklearn.preprocessing import OrdinalEncoder
+
+# decide the oreder
+or_data = [["s", "m", "l", "xl"]]
+
+# create object of ordinal encoding, and change its default categories to our's, \
+# By default it arrange in alphabatical order, but we use 'or_data' arrangement
+oe = OrdinalEncoder(categories=or_data)
+
+# apply fit
+oe.fit(df[["size"]])
+
+# apply transfrom and store it in the main data frame
+df["size_en"] = oe.transform(df[["size"]])
+
+
+
+* Way 2: Map Function
+
+# using map function
+ord_data1 = {
+    "s": 0,
+    "m": 1,
+    "l": 2,
+    "xl": 3,
+}
+
+df["size_en_map"] = df["size"].map(ord_data1)
+
+df.head(5)
+
+
+
+
+~ Outlires
+
+* Show If there Outliers Available or not
+#useing boxplot to detect outliers
+# Identifiying outliers in Price column
+sns.boxplot(x = "Price", data=df)
+plt.show()
+
+#Using displot/histplot to detect outliers
+# sns.distplot(df["Price"])
+sns.displot(df["Price"])
+plt.show()
+
+
+* Remove Outliers, IQR method
+
+q1 = df["Price"].quantile(0.25)
+q3 = df["Price"].quantile(0.75)
+IQR = q3 - q1
+
+min_range = q1 - 1.5 * IQR
+max_range = q1 + 1.5 * IQR
+
+# new dataset with no outliers
+new_df = df[df["Price"] <= max_range]
+
+sns.boxplot(x = "Price", data=new_df)
+plt.show()
+
+
+
+* Remove Outliers, Z-Score method 
+# Z-Score Method to delete Outlires
+z_score = (df["Price"] - df["Price"].mean())/df["Price"].std()
+z_score
+
+# set z_score value to main df
+df["z_score"] = z_score
+# Values exclding outliers
+new_df_zScore = df[((df["z_score"] > -3) & (df["z_score"] < 3))]
+new_df_zScore.shape
+
+# compare box-plot, z_score
+new_df.shape, new_df_zScore.shape
+
+
+
+
+~ Feature Scaling
+
+* 1. Standardization (not effected by outliers)
+	
+
+* 2. Normalization (Main Max Scaling(Have other Mthod, but we use Min-Max scaling))
+	# After Min-Max scalling, mean = 0, Veriance = 1	
+	# x(normalization) = (x(i) - mean) / std
+
+
+from sklearn.preprocessing import MinMaxScaler
+mms = MinMaxScaler()
+mms.fit(dataset[["Column Name"]])
+mms.transform(dataset[["Column Name"]])
+
+
+
+
+~ Remove Duplicate Value
+
+# Show Duplicates
+df.duplicated()
+
+# Remove Duplicates
+df.drop_duplicates(inplace = True)
+
+
+
+
+~ Replace & Data Type Change
+# Fill Null values with Mode
+df["Col_Name"].fillna(df["same_col_name"].mpde()[0], inplace=True)
+
+# Replace a value with another, replace "3+" with "3"
+df["col_name"].replace("3+", "3", inplace=True)
+
+# Change Datatype, From Object/String to Integer
+df["col_name"] = df["col_name"].astype("int64")
+
+
+
+
+~ Funtion Transformer(Change Patterns of the Data)
+# After handling null values, outliers, apply Funtion Transformation(use log function)
+
+from sklearn.preprocessing import FunctionTransformation
+ft = FunctionTransformation(func = np.log1p) # log1p function
+# ft = FunctionTransformation(func = lambda x : x**2) # x square function
+
+ft.fit(df[["col_name"]])
+df["col_name_ft"] = ft.transform(df[["col_name"]])
+
+
+
+
+Feature selection technique: take those values that are important
+~ Backward Elimination, Forward Elimination (using MLXTEND)-   
+
+
+
+
+
+4.5.33
+
+
+
+
+
+
+Course *******
+
+1. Image Inhancement
+2. Gamma Corrected Image
+3. Clahe Image
+4. Spatial Filtering: unsharp Masking
+5. Frequency Domain Methods: 
